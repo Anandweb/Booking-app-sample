@@ -1,0 +1,21 @@
+header{
+  .menu-item{
+    ul{
+        padding-top: 40px;
+        padding-right: 40px;
+        float: right;
+      li{
+          float: left;
+          padding-right: 30px;
+          font-size: 17px;
+          cursor: pointer;
+          &:hover{
+            font-weight:bold;
+          }
+      }
+    }
+  }
+  .logo{
+    padding-left: 15px;
+  }
+}

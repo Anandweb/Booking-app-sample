@@ -1,0 +1,74 @@
+//styles for hotel list
+@import "partials/_base";
+@import "partials/_variables";
+@import "partials/_mixins";
+a.single-wrap{
+  display: block;
+  @include default-text-color($black)
+}
+.hotel-wrapper{
+  margin-top: 70px;
+  h1{
+    text-align: center;
+  }
+}
+a.single-wrap{
+  text-decoration: none;
+}
+.hotel-main-image{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  span{
+    display: block;
+  }
+  .name,.price{
+    text-align: center;
+    font-size: 30px;
+  }
+  .price{
+    @include default-text-color($gray)
+  }
+  .description{
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.addnewhtl{
+  @include default-text-color($white);
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+//styles foe hotel description
+.edit-wrapper{
+  margin-top: 70px;
+  .edit-btn{
+    a{
+      margin-left: 15px;
+      display: inline-block;
+    }
+  }
+}
+.avail_details{
+  li{
+    float: left;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    margin-right: 25px;
+  }
+}
+.hotel-desc-wrap{
+  margin-top: 45px;
+}
+footer{
+  margin-top:auto;
+  border-top: 1px solid $gray;
+  p{
+    text-align: center;
+    @include default-text-color($gray);
+    padding-top: 20px;
+  }
+}

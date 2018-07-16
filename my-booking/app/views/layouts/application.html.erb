@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyBooking</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% flash.each do |key,value| %>
+  <div class="flash-msg">
+    <p><%=value%></p>
+  </div>
+  <% end %>
+  <%= render  "partials/header" %>
+  <%= yield %>
+  <%= render  "partials/footer" %>
+</body>
+</html>

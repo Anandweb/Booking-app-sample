@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row edit-wrapper">
+    <div class="col-md-6">
+      <%= form_for @hotel, html: { multipart: true } do |fr|  %>
+          <div class="form-group">
+            <%= fr.label :image  %><br>
+            <%= fr.file_field :image%>
+          </div>
+          <div class="form-group">
+            <%= fr.label :name%><br>
+            <%= fr.text_field :name,class:"form-control"%>
+          </div>
+          <div class="form-group">
+            <%= fr.label :availability %><br>
+            <%= fr.text_field :availability,class:"form-control"%>
+          </div>
+          <div class="form-group">
+            <%= fr.label :date%><br>
+            <%= fr.text_field :date,class:"form-control daterange"%>
+          </div>
+          <div class="form-group">
+            <%= fr.label :price%><br>
+            <%= fr.text_field :price,class:"form-control"%>
+          </div>
+          <div class="form-group">
+            <%= fr.label :description%><br>
+            <%= fr.text_area :description,class:"form-control"%>
+          </div>
+          <div class="form-group edit-btn ">
+            <%= fr.submit "Update",class:" btn btn-success col-md-4"%>
+            <%= link_to "Back",hotel_path,class:"btn btn-success col-md-4 " %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

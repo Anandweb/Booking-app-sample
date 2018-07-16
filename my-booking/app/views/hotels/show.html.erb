@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="hotel-desc-wrap row">
+      <div class="col-md-6">
+          <%=  image_tag @hotel.image.url(:medium) %>
+      </div>
+      <div class="col-md-6">
+          <p class="description"><%=@hotel.description%></p>
+          <ul class="avail_details">
+            <li>Available rooms:<%=@hotel.availability%></li>
+            <li>DateBetween:<%=@hotel.date%></li>
+        </ul>
+      </div>
+      <div class="col-md-6"></div>
+        <div class="col-md-6 book-now">
+          <!-- <%= link_to 'Vote',class:"lolo" %> -->
+          <%= link_to 'Booknow',hotels_path,class: "btn btn-success col-md-4 availability_btn" ,remote:true,data:@hotel.id%>
+        </div>
+        <div class="col-md-6 hide-btn">
+          <%= link_to 'Edit',edit_hotel_path,class: "btn btn-success col-md-4"%>
+          <%= link_to 'delete',@hotel ,:method=>:delete,class: "btn btn-success col-md-4"%>
+        </div>
+  </div>
+</div>

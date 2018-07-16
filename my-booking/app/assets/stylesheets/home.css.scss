@@ -1,0 +1,30 @@
+@import "partials/_base";
+@import "partials/_variables";
+@import "partials/_mixins";
+//styles for video-banner
+.video-banner{
+  position: relative;
+  .booking-btn{
+    position: absolute;
+    left: 50%;
+    width: 600px;
+    margin-left: -300px;
+    top: 50%;
+    a{
+      width: 46%;
+      float: left;
+      text-align: center;
+      border: 2px solid gold;
+      padding: 12px 10px;
+      color: $white;
+      text-decoration: none;
+      &:hover{
+        background:$gold;
+      }
+    }
+    .Upload-rooms{
+      float: right;
+      margin: 0
+    }
+  }
+}
